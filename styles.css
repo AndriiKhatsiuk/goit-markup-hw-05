@@ -605,3 +605,19 @@ color: #F4F4FD;
     transform: translateY(100%);
     transition: transform 250ms linear;
 }
+
+/*backdrop*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);;
+}
+.modal {
+    width: 408px;
+    min-height: 576px;
+    border-color: #FCFCFC;
+}
+.modal-close {
+}
