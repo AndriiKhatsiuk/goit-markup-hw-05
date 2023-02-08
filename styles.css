@@ -51,6 +51,7 @@ img {
     --dark-color: #434455;
     --light-color: #f4f4fd;
     --dark-light-color: #e7e9fc;
+    --transition-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*index.html*/
@@ -127,6 +128,22 @@ background-color: var(--main-white-color);
 .contact-link:focus {
     color: var(--focus-and-hover-color);
 }
+
+.current {
+    color: var(--logo-and-btn-color);
+    position: relative;
+}
+
+.current::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--focus-and-hover-color);
+}
 /* main */
 
 .main {
@@ -166,6 +183,8 @@ background-color: var(--main-white-color);
     min-width: 169px;
     min-height: 56px;
     border: 0px solid rgba(00, 00, 00, 0.0);
+    border-color: transparent;
+    transition: background-color var(--transition-func);
 }
 .main-btn:focus,
 .main-btn:hover {
@@ -543,6 +562,10 @@ color: #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 } 
 
+.portfolio-product-item:hover .portfolio-icon-text{
+    transform: translateY(0);
+}
+
 .portfolio-product-item-header {
     margin-bottom: 8px;
     font-weight: 500;
@@ -563,4 +586,22 @@ color: #F4F4FD;
     border-top: none;
     bottom: 0;
     padding: 32px;
+}
+
+.portfolio-top-wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-icon-text {
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--light-color);
+    background-color: var(--logo-and-btn-color);
+    padding: 40px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
 }
