@@ -140,7 +140,7 @@ background-color: var(--main-white-color);
     content: '';
     position: absolute;
     left: 0;
-    bottom: -24px;
+    bottom: -28px;
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -346,7 +346,8 @@ background-color: var(--main-white-color);
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: var(--logo-and-btn-color)
+    background-color: var(--logo-and-btn-color);
+    transition: var(--transition-func);
 }
 
 .team-soc-icon{
@@ -354,7 +355,6 @@ background-color: var(--main-white-color);
 }
 
 .team-soc-link:is(:hover, :focus) {
-    transition: var(--transition-func);
     background-color: var(--focus-and-hover-color);
 }
 
@@ -395,16 +395,15 @@ background-color: var(--main-white-color);
     border: 1px solid #8e8f99;
     border-radius: 4px;
     padding: 16px 32px;
+    transition: var(--transition-func);
 }
 
 .customers-icon-link:hover, 
 .customers-icon-link:focus{
-    transition: var(--transition-func);
     border-color: var(--focus-and-hover-color);
 }
 .customers-icon-link:hover .customers-icon,
 .customers-icon-link:focus .customers-icon{
-    transition: var(--transition-func);
     fill: var(--focus-and-hover-color);
 }
 
@@ -645,13 +644,14 @@ color: #F4F4FD;
     border-radius: 50%;
     background-color: var(--dark-light-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #000000;
+    color: #000000; 
+    cursor: pointer;
 }
 .backdrop-svg{
+
 }
 
 .is-hidden{
-    opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
