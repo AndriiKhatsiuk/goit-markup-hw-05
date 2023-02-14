@@ -565,7 +565,7 @@ color: #F4F4FD;
 .portfolio-product-box:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.portfolio-product-item {
+.portfolio-product-box {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 } 
 
@@ -667,5 +667,11 @@ color: #F4F4FD;
 
 .modal-close:hover .backdrop-svg, 
 .modal-close:focus .backdrop-svg {
-    fill: #000000;
+    fill: var(--main-white-color);
 }
+
+.modal-close:hover,
+.modal-close:focus {
+    background-color: var(--focus-and-hover-color);
+}
+
